@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gaurav Vashistha Portfolio</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFD700", // Cyber Yellow
+                        "primary-dim": "#D4B200",
+                        "accent": "#00f2ff", // Neon Blue
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#121212",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["Courier New", "Courier", "monospace"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #222 1px, transparent 1px), linear-gradient(to bottom, #222 1px, transparent 1px)",
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#181811] dark:text-white min-h-screen flex flex-col overflow-x-hidden selection:bg-primary selection:text-black">
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="size-8 rounded-full bg-primary flex items-center justify-center text-black font-bold">
+                        <span class="material-symbols-outlined text-lg">terminal</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-sm font-bold tracking-wider uppercase leading-none">Gaurav Vashistha</h2>
+                        <span class="text-[10px] font-mono text-gray-500 dark:text-gray-400 mt-1">SYS.ONLINE</span>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Projects</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="#experience">Experience</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+                    <button
+                        class="bg-primary hover:bg-primary-dim text-black text-sm font-bold py-2 px-6 rounded-full transition-all transform hover:scale-105 flex items-center gap-2">
+                        <span>Hire Me</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-500 dark:text-gray-300 hover:text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow pt-20">
+        <section class="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.1]"
+                style="background-size: 40px 40px; background-image: linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px);">
+            </div>
+            <div class="relative z-10 max-w-5xl w-full flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                <div class="flex-1 text-left flex flex-col gap-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 w-fit">
+                        <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+                        <span class="font-mono text-xs text-primary font-bold tracking-widest uppercase">System
+                            Online</span>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.1]">
+                        Gaurav <br />
+                        <span
+                            class="relative whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">
+                            Vashistha
+                        </span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-bold font-mono tracking-tight">
+                        Agent Driven <span class="text-accent">AI Architect</span> &amp; <br class="hidden md:block" />
+                        Python Developer
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed font-light">
+                        Translating business requirements into autonomous workflows.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a class="group flex items-center justify-center gap-2 h-12 px-8 bg-primary text-black rounded-full font-bold transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(255,215,0,0.5)]"
+                            href="#projects">
+                            View Projects
+                            <span
+                                class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_downward</span>
+                        </a>
+                        <a class="group flex items-center justify-center gap-2 h-12 px-8 bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white rounded-full font-bold hover:bg-white/5 transition-all"
+                            href="#">
+                            Download Resume
+                            <span class="material-symbols-outlined text-sm">download</span>
+                        </a>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-200 dark:border-white/10">
+                        <p class="font-mono text-xs text-gray-500 mb-4 uppercase tracking-widest">Core Capabilities</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-mono hover:border-primary/50 transition-colors">Python</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-mono hover:border-primary/50 transition-colors">Docker</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-mono hover:border-primary/50 transition-colors">Flutter</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-mono hover:border-primary/50 transition-colors">Git</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-mono hover:border-primary/50 transition-colors">OpenAI
+                                API</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-mono hover:border-primary/50 transition-colors">Gemini</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-mono hover:border-primary/50 transition-colors">Prompt
+                                Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-[400px] aspect-square relative flex items-center justify-center">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-full blur-[80px]">
+                    </div>
+                    <div
+                        class="relative w-full h-full bg-surface-light dark:bg-surface-dark rounded-3xl border border-gray-200 dark:border-white/10 overflow-hidden shadow-2xl group">
+                        <div
+                            class="absolute top-0 left-0 w-full h-8 bg-gray-100 dark:bg-black/40 border-b border-gray-200 dark:border-white/10 flex items-center gap-2 px-4">
+                            <div class="size-3 rounded-full bg-red-500"></div>
+                            <div class="size-3 rounded-full bg-yellow-500"></div>
+                            <div class="size-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div
+                            class="p-6 pt-12 font-mono text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed overflow-hidden h-full">
+                            <span class="text-primary">class</span> <span
+                                class="text-accent">AgentArchitect</span>:<br />
+                              <span class="text-primary">def</span> <span class="text-blue-400">__init__</span>(self,
+                            <span class="text-orange-400">vision</span>):<br />
+                                self.vision = vision<br />
+                                self.stack = [<span class="text-green-400">"Python"</span>, <span
+                                class="text-green-400">"LLMs"</span>]<br />
+                            <br />
+                              <span class="text-primary">def</span> <span
+                                class="text-blue-400">deploy_agent</span>(self):<br />
+                                <span class="text-gray-500"># Autonomous execution</span><br />
+                                return <span class="text-green-400">"Workflow Optimized"</span>
+                            <br /><br />
+                            <span class="text-gray-500">&gt; Initializing neural bridge...</span><br />
+                            <span class="text-primary animate-pulse">&gt; SYSTEM READY_</span>
+                        </div>
+                        <div class="absolute bottom-0 right-0 w-32 h-32 opacity-20"
+                            data-alt="Abstract cybernetic pattern texture"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBC1xSwO0eMNAiXTdOjOl7Y-XMvX7utB7yA1mTcXckuejHpuNwuOc53IAxpGVLqXqzJgc1weiNbRnFBaMKSHke8nOG7mtBahXCw1Tl243d1RguzaFIXpgfePOHCEuzGoWNqX_zCkgje_Yvqmv_NLWM6z8xZx5sHrCYTiZUsijxq_TtePxzqXBkpeyCpkWagKA1hFzvUWfFsrUEjpXRJfrrSAQJIt3u569mh29itCaIX63wYWBsBzN6L35nK6xOBdDuY1qk5iC7tBGY'); background-size: cover; mix-blend-mode: overlay;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-gray-200 dark:border-white/5"
+            id="experience">
+            <h2 class="text-3xl font-bold tracking-tight mb-16 text-center">Deployment History</h2>
+            <div class="relative max-w-3xl mx-auto">
+                <div
+                    class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gray-200 dark:bg-white/10 md:-translate-x-1/2">
+                </div>
+                <div class="relative flex flex-col md:flex-row items-start justify-center gap-8 group mb-12">
+                    <div
+                        class="absolute left-4 md:left-1/2 top-6 size-3 bg-primary rounded-full border-4 border-white dark:border-background-dark md:-translate-x-1/2 z-10 shadow-[0_0_10px_rgba(255,215,0,0.6)]">
+                    </div>
+                    <div class="pl-12 md:pl-0 md:pr-12 md:text-right md:w-1/2 mt-4 md:mt-2">
+                        <div
+                            class="inline-block px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono font-bold">
+                            JAN 2025 - SEP 2025
+                        </div>
+                    </div>
+                    <div class="pl-12 md:pl-12 md:w-1/2 w-full">
+                        <div
+                            class="bg-white dark:bg-surface-dark p-6 rounded-2xl border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-all shadow-lg group-hover:translate-y-[-2px]">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Digital Catalog &amp; SEO
+                                Specialist</h3>
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">CreativeLipi</p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                                Managed 27 client catalogs monthly &amp; led LLM workflow automation.
+                            </p>
+                            <div class="flex gap-2">
+                                <span
+                                    class="text-[10px] font-mono border border-gray-200 dark:border-white/10 px-2 py-1 rounded text-gray-500 hover:text-primary hover:border-primary/30 transition-colors">SEO</span>
+                                <span
+                                    class="text-[10px] font-mono border border-gray-200 dark:border-white/10 px-2 py-1 rounded text-gray-500 hover:text-primary hover:border-primary/30 transition-colors">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-surface-light dark:bg-[#0f0f0f] border-t border-gray-200 dark:border-white/5"
+            id="projects">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="flex flex-col gap-2 mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight">Project Protocols</h2>
+                    <p class="text-gray-500 dark:text-gray-400 max-w-2xl font-mono text-sm">Active development and
+                        deployed solutions.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                        class="group relative bg-white dark:bg-surface-dark rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-all duration-300">
+                        <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-4xl text-primary -rotate-12">mic</span>
+                        </div>
+                        <div class="p-8 flex flex-col h-full">
+                            <div class="flex justify-between items-start mb-6">
+                                <div
+                                    class="size-12 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center border border-gray-200 dark:border-white/10 text-accent">
+                                    <span class="material-symbols-outlined">graphic_eq</span>
+                                </div>
+                                <div class="flex gap-1">
+                                    <span class="size-2 bg-green-500 rounded-full animate-pulse"></span>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Jarvis -
+                                Voice Assistant</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
+                                Voice-activated assistant with real-time news &amp; automation.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-full text-xs font-mono text-gray-600 dark:text-gray-300 border border-transparent hover:border-primary/30 transition-colors">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-full text-xs font-mono text-gray-600 dark:text-gray-300 border border-transparent hover:border-primary/30 transition-colors">OpenAI</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-full text-xs font-mono text-gray-600 dark:text-gray-300 border border-transparent hover:border-primary/30 transition-colors">SpeechRec</span>
+                            </div>
+                            <div
+                                class="pt-6 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
+                                <a class="text-sm font-bold flex items-center gap-2 hover:gap-3 transition-all hover:text-accent"
+                                    href="#">
+                                    View Source <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                                <span class="text-xs font-mono text-gray-500">V.2.0.1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative bg-white dark:bg-surface-dark rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-all duration-300">
+                        <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-4xl text-primary -rotate-12">link</span>
+                        </div>
+                        <div class="p-8 flex flex-col h-full">
+                            <div class="flex justify-between items-start mb-6">
+                                <div
+                                    class="size-12 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center border border-gray-200 dark:border-white/10 text-accent">
+                                    <span class="material-symbols-outlined">link_off</span>
+                                </div>
+                                <div class="flex gap-1">
+                                    <span class="size-2 bg-primary rounded-full"></span>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">URL Shortener
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
+                                Full-stack web app for secure link management.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-full text-xs font-mono text-gray-600 dark:text-gray-300 border border-transparent hover:border-primary/30 transition-colors">Flask</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-full text-xs font-mono text-gray-600 dark:text-gray-300 border border-transparent hover:border-primary/30 transition-colors">SQLite</span>
+                            </div>
+                            <div
+                                class="pt-6 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
+                                <a class="text-sm font-bold flex items-center gap-2 hover:gap-3 transition-all hover:text-accent"
+                                    href="#">
+                                    View Source <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                                <span class="text-xs font-mono text-gray-500">V.1.1.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-background-light dark:bg-background-dark py-20 border-t border-gray-200 dark:border-white/10"
+        id="contact">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-6">Ready to initiate?</h2>
+            <p class="text-gray-500 mb-12 max-w-md">Currently available for freelance projects and open to full-time
+                opportunities.</p>
+            <a class="text-xl md:text-3xl font-mono font-bold hover:text-primary transition-colors mb-12 break-all border-b-2 border-transparent hover:border-primary"
+                href="mailto:gaurav.vashistha09@gmail.com">
+                gaurav.vashistha09@gmail.com
+            </a>
+            <div class="flex gap-6">
+                <a class="size-14 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-black hover:border-primary transition-all group hover:scale-110"
+                    href="https://github.com/Bhishaj9">
+                    <svg class="size-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path clip-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.65.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85v2.74c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a class="size-14 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-black hover:border-primary transition-all group hover:scale-110"
+                    href="#">
+                    <svg class="size-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="size-14 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-black hover:border-primary transition-all group hover:scale-110"
+                    href="mailto:gaurav.vashistha09@gmail.com">
+                    <span class="material-symbols-outlined">mail</span>
+                </a>
+            </div>
+            <div class="mt-16 text-xs text-gray-500 font-mono">
+                © 2025 Gaurav Vashistha. All systems operational.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.font-mono {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
