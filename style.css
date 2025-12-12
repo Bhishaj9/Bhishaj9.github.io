@@ -76,3 +76,15 @@ body {
         }
     }
 }
+/* Hero Badge Adjustments */
+.hero-badge {
+    width: fit-content;
+    min-width: auto;
+}
+
+@media (max-width: 380px) {
+    .hero-badge-text {
+        font-size: 10px !important;
+        letter-spacing: 0.05em;
+    }
+}
