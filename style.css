@@ -51,6 +51,17 @@ body {
     .nav-menu.active>a:last-child {
         border-bottom: none;
         margin-top: 0.5rem;
+        padding: 10px 24px;
+        width: fit-content !important;
+        /* Force it to shrink to text size */
+        margin-left: auto !important;
+        /* Force left margin */
+        margin-right: auto !important;
+        /* Force right margin */
+        display: block !important;
+        /* Ensure it behaves like a block to accept margins */
+        text-align: center !important;
+        /* Center the text inside */
     }
 
     @keyframes slideDown {

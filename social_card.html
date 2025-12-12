@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Card Preview</title>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .card-container {
+            width: 1200px;
+            height: 630px;
+            background-color: #0a0a0a;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #333;
+            /* Optional border to see edges */
+            box-sizing: border-box;
+        }
+
+        .main-text {
+            color: #ffffff;
+            font-size: 80px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .sub-text {
+            color: #FFD700;
+            /* Neon Yellow */
+            font-size: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .footer-text {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            color: #666;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        #downloadBtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 12px 24px;
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            font-family: 'Inter', sans-serif;
+            transition: transform 0.1s ease;
+        }
+
+        #downloadBtn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="downloadBtn">📸 Download Preview.png</button>
+
+    <div class="card-container" id="capture">
+        <div class="main-text">GAURAV VASHISTHA</div>
+        <div class="sub-text">Agent Driven AI Architect</div>
+        <div class="footer-text">bhishaj9.github.io</div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            html2canvas(document.querySelector("#capture")).then(canvas => {
+                // Convert canvas to blob/data URL
+                const image = canvas.toDataURL("image/png");
+
+                // Trigger download
+                const link = document.createElement('a');
+                link.download = 'preview.png';
+                link.href = image;
+                link.click();
+            });
+        });
+    </script>
+</body>
+
+</html>
