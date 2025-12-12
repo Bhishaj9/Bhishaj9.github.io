@@ -1,18 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Copy Email Feature
+    console.log('DOM fully loaded');
+
+    // --- Mobile Menu Toggle ---
+    const menuButton = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-menu');
+
+    if (menuButton && navList) {
+        console.log('Mobile menu elements found');
+        menuButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent clicks from bubbling up
+            navList.classList.toggle('active');
+            console.log('Menu toggled. Active class present:', navList.classList.contains('active'));
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navList.classList.contains('active') && !navList.contains(e.target) && !menuButton.contains(e.target)) {
+                navList.classList.remove('active');
+                console.log('Menu closed by outside click');
+            }
+        });
+
+        // Close menu when clicking a link
+        navList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+    } else {
+        console.error('Mobile menu elements NOT found. Check .menu-toggle and .nav-menu classes.');
+    }
+
+
+    // --- Preserve existing functionality: Copy Email Feature ---
     const emailBtn = document.getElementById('email-btn');
     const emailText = document.getElementById('email-text');
 
     if (emailBtn) {
         emailBtn.addEventListener('click', async () => {
             const email = emailBtn.getAttribute('data-email');
-
             try {
                 await navigator.clipboard.writeText(email);
-
-                // Visual Feedback
                 const originalText = emailText.innerText;
-                const originalIcon = emailBtn.innerHTML;
 
                 emailText.innerText = 'Copied!';
                 emailBtn.classList.add('copied');
@@ -21,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     emailText.innerText = originalText;
                     emailBtn.classList.remove('copied');
                 }, 2000);
-
             } catch (err) {
                 console.error('Failed to copy text: ', err);
                 emailText.innerText = 'Failed :(';
@@ -30,17 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth Scroll for Navigation
+    // --- Preserve existing functionality: Smooth Scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
-    // Reveal on Scroll
+    // --- Preserve existing functionality: Reveal on Scroll ---
     const observerOptions = {
         threshold: 0.1
     };
@@ -60,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Dynamic styles for revealed elements
     const style = document.createElement('style');
     style.innerHTML = `
         .visible {
@@ -69,21 +99,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
-
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link (optional but recommended for UX)
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-    }
 });
