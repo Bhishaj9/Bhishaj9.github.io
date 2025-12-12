@@ -2,26 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Copy Email Feature
     const emailBtn = document.getElementById('email-btn');
     const emailText = document.getElementById('email-text');
-    
+
     if (emailBtn) {
         emailBtn.addEventListener('click', async () => {
             const email = emailBtn.getAttribute('data-email');
-            
+
             try {
                 await navigator.clipboard.writeText(email);
-                
+
                 // Visual Feedback
                 const originalText = emailText.innerText;
                 const originalIcon = emailBtn.innerHTML;
-                
+
                 emailText.innerText = 'Copied!';
                 emailBtn.classList.add('copied');
-                
+
                 setTimeout(() => {
                     emailText.innerText = originalText;
                     emailBtn.classList.remove('copied');
                 }, 2000);
-                
+
             } catch (err) {
                 console.error('Failed to copy text: ', err);
                 emailText.innerText = 'Failed :(';
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
-    
+
     // Dynamic styles for revealed elements
     const style = document.createElement('style');
     style.innerHTML = `
@@ -69,4 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link (optional but recommended for UX)
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    }
 });
