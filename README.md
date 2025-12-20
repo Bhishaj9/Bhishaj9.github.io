@@ -3,13 +3,23 @@
 [![Status: Live](https://img.shields.io/badge/Status-Live-success)](https://bhishaj9.github.io/)
 [![Hosted On: GitHub Pages](https://img.shields.io/badge/Hosted%20On-GitHub%20Pages-blue)](https://pages.github.com/)
 
-## 🚀 Built With
+## ⚡ Tech Stack & Tools
 
-This project utilizes an **Agentic Workflow** to ensure high-quality, automated development.
+*   **Llama 3.2 Vision**
+*   **Groq**
+*   **n8n**
+*   **Docker**
+*   **Pinecone (RAG)**
+*   **Google Stitch**
+*   **Python**
 
-*   **Google Stitch** (UI)
-*   **Google Antigravity** (Logic)
-*   **html2canvas** (Automation)
+## 🛠️ Featured Projects
+
+1.  **MerchFlow AI (Enterprise)**
+    *   Multi-agent system converting images to SEO listings using Llama 3.2 & Groq.
+
+2.  **Jarvis Assistant**
+    *   Voice-activated command center with Real-Time News integration.
 
 ## 📂 Project Structure
 
@@ -27,6 +37,6 @@ portfolio/
 
 ## ✨ Key Features
 
+*   **Philosophy Driven Design**: Custom 'Karmanye Vadhikaraste' badge and 'Agent Active' status.
 *   **Mobile-First Command Center**: Optimized for seamless interaction on mobile devices.
-*   **Social Graph Optimization**: Integrated support for sharing via WhatsApp and LinkedIn.
 *   **Direct-Email Hiring Protocol**: Streamlined communication for recruiters and potential collaborators.
