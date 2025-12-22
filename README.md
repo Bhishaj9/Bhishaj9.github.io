@@ -1,25 +1,26 @@
-# Gaurav Vashistha | Agent Driven AI Architect
+# Gaurav Vashistha | Agentic AI Engineer & Python Developer
 
 [![Status: Live](https://img.shields.io/badge/Status-Live-success)](https://bhishaj9.github.io/)
 [![Hosted On: GitHub Pages](https://img.shields.io/badge/Hosted%20On-GitHub%20Pages-blue)](https://pages.github.com/)
 
 ## ⚡ Tech Stack & Tools
 
+*   **FastAPI**
+*   **Gemini 1.5**
 *   **Llama 3.2 Vision**
 *   **Groq**
 *   **n8n**
 *   **Docker**
 *   **Pinecone (RAG)**
-*   **Google Stitch**
-*   **Python**
+*   **Python (AsyncIO)**
 
 ## 🛠️ Featured Projects
 
 1.  **MerchFlow AI (Enterprise)**
-    *   Multi-agent system converting images to SEO listings using Llama 3.2 & Groq.
+    *   Sequential multi-agent system (Visual, Memory, Writer) utilizing **FastAPI** and **Pinecone** for automated SEO listings.
 
 2.  **Jarvis Assistant**
-    *   Voice-activated command center with Real-Time News integration.
+    *   Voice-activated command center with **NewsAPI** integration and real-time data retrieval.
 
 ## 📂 Project Structure
 
